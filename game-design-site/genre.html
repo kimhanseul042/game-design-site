@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 게임 장르 백과</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== 기본 설정 ===== */
+    body {
+      margin: 0;
+      font-family: 'Pixelify Sans', sans-serif;
+      background-color: #9B5DE0; /* 전체 보라색 배경 */
+    }
+
+    /* ===== 헤더 ===== */
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #4E56C0;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #333; /* 제목 그림자 */
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ffe8a3; /* 부제 색상 */
+    }
+
+    /* ===== 메인 영역 ===== */
+    main {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 50px;
+      color: #FDCFFA;
+    }
+
+    /* ===== 장르 카드 + 설명 레이아웃 ===== */
+    .genre-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 80px;
+    }
+
+    /* 짝수 번째 줄은 카드-텍스트 반전 */
+    .genre-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* ===== 카드 ===== */
+    .genre-card {
+      position: relative;
+      width: 45%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .genre-card:hover {
+      transform: scale(1.05); /* hover 시 확대 효과 */
+    }
+
+    .genre-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease; /* 부드러운 투명도 변화 */
+    }
+
+    .genre-card:hover img {
+      opacity: 0.5; /* hover 시 이미지 반투명 */
+    }
+
+    /* 카드 오버레이 텍스트 */
+    .genre-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.8em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .genre-card:hover .genre-text {
+      opacity: 1; /* hover 시 텍스트 등장 */
+    }
+
+    /* ===== 설명 영역 ===== */
+    .genre-description {
+      width: 50%;
+      color: #fff;
+      line-height: 1.8;
+      font-size: 1.1em;
+      background-color: rgba(46, 49, 146, 0.3);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== 푸터 ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #4E56C0;
+      color: #fff;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== 헤더 ===== -->
+  <header>
+    <h1>🎮 게임 장르 백과</h1>
+    <p>다양한 장르를 통해 게임의 세계를 탐험해보자!</p>
+    <p><a href="gaga.html">← 메인으로 돌아가기</a></p>
+  </header>
+
+  <!-- ===== 메인 ===== -->
+  <main>
+    <h2>장르별 소개</h2>
+
+    <!-- (1) 액션 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2017/01/31/20/16/fantasy-2022810_1280.png" alt="액션">
+        <div class="genre-text">액션 (Action)</div>
+      </div>
+      <div class="genre-description">
+        빠른 반응과 조작 중심의 장르. 타이밍과 손기술이 중요하다.<br>
+        🎮 대표작: 슈퍼마리오, 데빌메이크라이, 젤다의 전설
+      </div>
+    </section>
+
+    <!-- (2) 어드벤처 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/15/55/adventure-1836016_1280.jpg" alt="어드벤처">
+        <div class="genre-text">어드벤처 (Adventure)</div>
+      </div>
+      <div class="genre-description">
+        탐험과 스토리 중심의 게임으로, 퍼즐과 대화 위주로 전개된다.<br>
+        🎮 대표작: 라이프 이즈 스트레인지, 몽키 아일랜드
+      </div>
+    </section>
+
+    <!-- (3) RPG -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2017/02/19/23/00/fantasy-2089594_1280.jpg" alt="RPG">
+        <div class="genre-text">RPG (Role Playing Game)</div>
+      </div>
+      <div class="genre-description">
+        캐릭터의 성장과 스토리가 중심. 경험치와 레벨 시스템이 존재한다.<br>
+        🎮 대표작: 파이널판타지, 젤다, 위쳐3
+      </div>
+    </section>
+
+    <!-- (4) SRPG -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2017/08/06/09/54/chess-2593380_1280.jpg" alt="SRPG">
+        <div class="genre-text">SRPG / 전략 RPG</div>
+      </div>
+      <div class="genre-description">
+        RPG에 전략 요소를 결합한 장르. 턴제 전투가 핵심이다.<br>
+        🎮 대표작: 파이어엠블렘, 디스가이아
+      </div>
+    </section>
+
+    <!-- (5) 시뮬레이션 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/07/24/city-1868534_1280.jpg" alt="시뮬레이션">
+        <div class="genre-text">시뮬레이션 (Simulation)</div>
+      </div>
+      <div class="genre-description">
+        현실의 행위나 시스템을 모방하는 장르. 경영, 건설, 연애 등 다양하다.<br>
+        🎮 대표작: 심즈, 심시티, 스타듀밸리
+      </div>
+    </section>
+
+    <!-- (6) 전략 / 전술 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2017/07/12/18/16/chess-2494726_1280.jpg" alt="전략">
+        <div class="genre-text">전략 / 전술 (Strategy)</div>
+      </div>
+      <div class="genre-description">
+        자원 관리와 병력 운용을 통해 승리를 목표로 하는 전략 중심 장르.<br>
+        🎮 대표작: 스타크래프트, 워크래프트, 문명
+      </div>
+    </section>
+
+    <!-- (7) 슈팅 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2015/07/02/09/16/gun-828593_1280.jpg" alt="슈팅">
+        <div class="genre-text">슈팅 (Shooting)</div>
+      </div>
+      <div class="genre-description">
+        무기나 총을 이용해 적을 공격하는 액션 중심 장르.<br>
+        🎮 대표작: 배틀필드, 콜오브듀티, 엔터 더 건전
+      </div>
+    </section>
+
+    <!-- (8) FPS -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2017/01/30/17/46/shooter-2021515_1280.jpg" alt="FPS">
+        <div class="genre-text">FPS (1인칭 슈팅)</div>
+      </div>
+      <div class="genre-description">
+        1인칭 시점에서 총을 쏘며 전투를 펼치는 장르.<br>
+        🎮 대표작: 오버워치, 카운터스트라이크, 둠
+      </div>
+    </section>
+
+    <!-- (9) TPS -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2016/02/19/10/00/assault-1207953_1280.jpg" alt="TPS">
+        <div class="genre-text">TPS (3인칭 슈팅)</div>
+      </div>
+      <div class="genre-description">
+        캐릭터를 외부 시점에서 조작하며 총격전을 벌이는 장르.<br>
+        🎮 대표작: 기어즈오브워, 더 디비전
+      </div>
+    </section>
+
+    <!-- (10) 퍼즐 -->
+    <section class="genre-section">
+      <div class="genre-card">
+        <img src="https://cdn.pixabay.com/photo/2014/04/05/11/40/puzzle-316670_1280.jpg" alt="퍼즐">
+        <div class="genre-text">퍼즐 (Puzzle)</div>
+      </div>
+      <div class="genre-description">
+        논리력과 판단력을 이용해 문제를 해결하는 장르.<br>
+        🎮 대표작: 테트리스, 캔디크러시, 포탈
+      </div>
+    </section>
+
+    <!-- (11~19번) -->
+    <!-- 같은 형식으로 스포츠~인디까지 이어서 넣을 수 있음 -->
+     
+  </main>
+
+  <footer>
+    <p>© 2025 Game Design Guide | Designed with ❤️ in Pixel Style</p>
+  </footer>
+
+</body>
+</html>
